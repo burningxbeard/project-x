@@ -3,14 +3,11 @@
     margin: 0;
     padding: 0;
 }
-:root {
-    font-size: 16px;
-}
 header {
     display: flex;
-    padding: 1rem 1rem 3rem;
-    align-items: center;
-    justify-content: space-between;
+    padding: 2rem 1rem 2rem;
+    align-items: start;
+    justify-content: center;
 }
 nav {
     display: flex;
@@ -34,7 +31,7 @@ article {
     padding: 1rem;
 }
 #logo-wrapper {
-    text-align: start;
+    text-align: center;
 }
 .grid {
     display: grid;
@@ -44,10 +41,22 @@ article {
 .grid-item {
     padding: 1rem;
 }
-
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+}
+
+@media (min-width: 760px) {
+    header {
+        justify-content: space-between;
+    }
+    .nav-main {
+        display: revert;
+    }
+    #logo-wrapper {
+        text-align: start;
+    }
+    
 }
