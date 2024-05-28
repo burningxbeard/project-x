@@ -17,6 +17,9 @@ nav {
     align-items: center;
     justify-content: center;
 }
+.nav-main {
+    display: none;
+}
 .nav-main li {
     display: inline-block;
     padding-right: 1rem;
