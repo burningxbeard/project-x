@@ -2,11 +2,14 @@
 body {
     background-color: hsl(0, 0%, 96%);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1em;
     color: hsl(0, 0%, 18%);
 }
 
 header {
-    background-color: hsl(0, 0%, 86%);
+    background-color: hsl(28, 100%, 32%);
+    color: hsl(0, 0%, 84%);
+    text-shadow: 1px 1px hsl(0, 0%, 0%);
 }
 nav {
     background-color: hsl(0, 56%, 16%);
@@ -15,11 +18,30 @@ nav {
 footer {
     background-color: hsl(0, 0%, 88%);
 }
+/* .nav-main {
+    display: none;
+} */
+.nav-main ul {
+    list-style-type: none;
+}
+.nav-main li {
+    text-transform: uppercase;
+}
 .grid-item {
     background-color: hsl(0, 0%, 84%);
 }
+.grid-item:nth-child(even) {
+    background-color: hsl(0, 0%, 60%);
+}
 .border {
     border: 1px solid hsl(0, 0%, 0%);
+}
+li a, li a:visited, li a:active {
+    color:hsl(180, 100%, 27%);
+    text-decoration: none;
+}
+li a:hover {
+    color: hsl(0, 0%, 84%);
 }
 
 #copyright {
