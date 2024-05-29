@@ -11,7 +11,8 @@ header {
 }
 nav {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
     justify-content: center;
 }
 .nav-main {
@@ -46,6 +47,20 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+}
+.sm-txt {
+    text-indent: 1.5rem;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    text-justify: auto;
+    ;
+}
+#icons {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+i {
+    margin: 0 6px;
 }
 
 @media (min-width: 760px) {
