@@ -11,10 +11,10 @@ const fetchPokemon = async () => {
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +
             1}.png`
     }));
-
+   
     displayPokemon(pokemon);
+    console.log(pokemon);
 };
-
 const displayPokemon = (pokemon) => {
     const pokemonHTMLString = pokemon
         .map(
@@ -44,7 +44,7 @@ const selectPokemon = async (id) => {
 };
 
 const displayPokemanPopup = (pokeman) => {
-    console.log(pokeman);
+    // console.log(pokeman);
     const type = pokeman.types.map((type) => type.type.name).join(', ');
     const htmlString = `
         <div class="popup">
@@ -67,24 +67,3 @@ const closePopup = () => {
 };
 
 fetchPokemon();
-
-
-// const fetchPokemon = () => {
-
-//     const promises = [];
-//     for (let i = 1; i <= 100; i++) {
-//     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-//     promises.push(fetch(url).then(res => res.json()));
-// }
-// Promise.all(promises).then(results => {
-//     const pokemon = results.map((data) => ({
-//         name: data.name,
-//         id: data.id,
-//         image: data.sprites['front_default'],
-//         type: data.types.map((type) => type.type.name).join(', ')
-//     }));
-//     console.log(pokemon);
-// });
-// };
-
-// fetchPokemon();
