@@ -9,17 +9,18 @@ const fetchCharacter = async () => {
         name: data.name,
         image: data.imageUrl,
         id: index + 1
+
     }));
+
     // console.log(character);
     displayCharacter(character);
-    
 };
 const displayCharacter = (character) => {
-    const disneyHTMLString = character.map((character) =>
+    const disneyHTMLString = character.map((dischar) =>
                 `
-    <li class="card" onclick="selectCharacter(${character.id})">
-        <img class="card-image" src="${character.image}"/>
-        <h2 class="card-title">${character.name}</h2>
+    <li class="card" onclick="selectCharacter(${dischar.id})">
+        <img class="card-image" src="${dischar.image}"/>
+        <h2 class="card-title">${dischar.name}</h2>
         </a>
     </li>
         `
@@ -32,23 +33,23 @@ const selectCharacter = async (id) => {
     if (!cachedCharacter[id]) {
         const url = `https://api.disneyapi.dev/character/${id}`;
         const res = await fetch(url);
-        const character = await res.json();
-        cachedCharacter[id] = character;
-        displayCharacterPopup(character);
+        const dischar = await res.json();
+        cachedCharacter[id] = dischar;
+        displayCharacterPopup(dischar);
     } else {
         displayCharacterPopup(cachedCharacter[id]);
     }
 };
 
-const displayCharacterPopup = (character) => {
+const displayCharacterPopup = (dischar) => {
     // console.log(character);
-    const film = character.data.map((film) => film.data.films).join(', ');
+    // const film = dischar.data.map((film) => film.data.films).join(', ');
     const htmlString = `
         <div class="popup">
             <button id="closeBtn" onclick="closePopup()">X</button>
             <div class="details">
-                <img class="card-image" src="${character.image}"/>
-                <h2 class="card-title">${character.name}</h2>
+                <img class="card-image" src="${dischar.image}"/>
+                <h2 class="card-title">${dischar.name}</h2>
                 <p><span class="type-pill">you're a loser</span></p>
             </div>
         </div>
