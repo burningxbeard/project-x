@@ -22,7 +22,7 @@ const displayPokemon = (pokemon) => {
                 `
     <li class="card" onclick="selectPokemon(${pokeman.id})">
         <img class="card-image" src="${pokeman.image}"/>
-        <h2 class="card-title">${pokeman.name}</h2>
+        <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
         </a>
     </li>
         `
